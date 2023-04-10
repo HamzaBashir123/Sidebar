@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --blue : #49a6e9;
+
+}
+.mainDiv{
+    background-color: aquamarine;
+}
+.navigation{
+    background-color: aliceblue;
+    display: flex;
+    justify-content: end;
+    padding-right: 30px;
+}
+.menuBtn{
+    padding: 10px;
+    font-size: larger;
+    color: var(--blue);
+    border: none;
+    background-color: transparent;
+    
+}
