@@ -2,25 +2,270 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    
+
 }
+
 :root{
     --blue : #49a6e9;
+    --darkblue : #2A2A72;
 
 }
 .mainDiv{
-    background-color: aquamarine;
+    background-image: linear-gradient(to left , var(--darkblue) , var(--blue));
+    height: 100vh;
+    overflow-y: hidden;
+    position: relative;
+    padding: 0;
+
+
 }
+
+
 .navigation{
     background-color: aliceblue;
     display: flex;
     justify-content: end;
     padding-right: 30px;
+    /* border: 2px solid rebeccapurple; */
+
+    
 }
 .menuBtn{
-    padding: 10px;
-    font-size: larger;
+    padding: 15px 30px 15px 0px;
+    font-size: 30px;
     color: var(--blue);
     border: none;
     background-color: transparent;
+    transition: 0.5s;
+    animation: toggleAnimation 1s ease-in 0s infinite alternate forwards;
+    /* border: 2px solid rebeccapurple; */
+
+}  
+.menuBtn:hover{
+    cursor: pointer;
+} 
+
+@keyframes toggleAnimation {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.3);
+        color: --;
+    }
+}
+.sideBar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* border: 2px solid rebeccapurple; */
+    width: 380px;
+    height: 100vh;
+    background-color: var(--darkblue);
+    transform: translateX(-100%);
+    transition: 0.3s linear;
+
+}
+
+.showSidebar{
+    transform: translateX(0%) !important;
+}
+.sdbrIcn{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 20px;
+    /* border: 2px solid rebeccapurple; */
+    
+    
+    
+    
+    
+
+
+}
+.sdbrIcn a{
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px;
+    opacity: 0.7;
+ 
+
+}
+.lastDiv{
+    display: flex;
+    justify-content: center;
+}
+.sdbrIcn a:hover{
+    
+    
+    font-size: 35px;
+    font-weight: bolder;
+    opacity: 1;
+    
+}
+
+@keyframes logoanimation {
+    0%{
+        transform: translateX(200%)
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.sideMenu{
+    margin-top: 50px;
+    margin-left: 30px;
+    
+}
+.sideMenu a{
+    color: var(--blue);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 50px;
+    opacity: 0.7;
+
+
+   
+}
+.sideMenu li{
+    list-style: none;
+
+}
+.sideMenu a:hover{
+  
+    font-size: 35px;
+    opacity: 1;
+   
+}
+.animationLogo{
+    /* border: 2px solid rebeccapurple; */
+    width: 80%;
+
+
+}
+
+.logoSideBar{
+    color:var(--blue);
+    font-size: 40px;
+    /* background-color: #2A2A72; */
+    padding: 9px 0px 0px 30px;
+    animation: logoanimation 0.8s ease-in 0s infinite alternate ; 
+    background-color: transparent;
+    /* border: 2px solid rebeccapurple; */
+    cursor: pointer;
+    
+}
+.upperSideBar{
+    display: flex;
+    /* border: 2px solid rebeccapurple; */
+    justify-content: space-between;
+
+}
+.cross{
+    width: 20%;
+    /* border: 2px solid rebeccapurple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bolder;
+    color: var(--blue);
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 20px;
+    
+    
+   
+    
+}
+
+.cross i {
+    transition: 0.2s;
+    
+}
+.cross i:hover {
+    transform: rotate(180deg);
+}
+
+@media only screen and (max-width:500px){
+   
+    .menuBtn{
+        padding: 10px 5px 10px 0px;
+        font-size: 20px;
+        color: var(--blue);
+        border: none;
+        background-color: transparent;
+        transition: 0.5s;
+        animation: toggleAnimation 1s ease-in 0s infinite alternate forwards;
+    } 
+   
+    
+    
+    
+    .sdbrIcn a{ 
+        font-size: 20px;
+    }
+ 
+    .sdbrIcn a:hover{
+        font-size: 25px;
+       
+    }
+ 
+    .sideMenu{
+        margin-top: 50px;
+        margin-left: 30px;
+        
+    }
+    .sideMenu a{
+        font-size: 20px;
+        font-weight: bold;
+
+       
+    }
+  
+    .sideMenu a:hover{
+      
+        font-size: 25px;
+        opacity: 1;
+       
+    }
+    .animationLogo{
+        /* border: 2px solid rebeccapurple; */
+        width: 80%;
+    
+    
+    }
+    
+    .logoSideBar{
+        font-size: 30px;
+        /* background-color: #2A2A72; */
+        padding: 10px 0px 0px 30px;
+       
+        
+    }
+    .upperSideBar{
+        display: flex;
+        /* border: 2px solid rebeccapurple; */
+        justify-content: space-between;
+    
+    }
+    .cross{
+        width: 20%;
+        /* border: 2px solid rebeccapurple; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        color: var(--blue);
+        font-size: 20px;
+        
+    }
+    
+   
+    
     
 }
