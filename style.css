@@ -61,7 +61,7 @@
     top: 0;
     left: 0;
     /* border: 2px solid rebeccapurple; */
-    width: 100%;
+    width: 30% !important;
     height: 100vh;
     background-color: var(--darkblue);
     transform: translateX(-100%);
@@ -204,7 +204,13 @@
     } 
    
     
+    .sideBar{
+        
+      
+        width: 100% !important;
+        
     
+    }
     
     .sdbrIcn a{ 
         font-size: 20px;
@@ -264,8 +270,16 @@
         font-size: 20px;
         
     }
+
+ 
     
    
     
     
+}
+@media(min-width: 501px) and (max-width: 786px) {
+    .sideBar{
+        width: 50% !important;
+        
+    }
 }
